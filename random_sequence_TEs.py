@@ -49,8 +49,6 @@ def generate_random_sequence(params):
     alphabet = ["A", "T", "G", "C"]
     weights = [0.29, 0.29, 0.21, 0.21]
     #Generate random sequence that is going to separate the repeats
-    abase_sequence = "".join([random.choice(alphabet) for i in xrange(0,params['seq_length'])])
-    #base_sequence = random.choices(alphabet, weights, params['seq_length'])
     base_sequence = "".join(numpy.random.choice(alphabet, params['seq_length'], p=weights, replace=True))
     return base_sequence
 

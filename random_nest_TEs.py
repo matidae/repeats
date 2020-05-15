@@ -3,8 +3,8 @@ import random
 import yaml
 import numpy
 from Bio import SeqIO, Seq
-from random_seq_rep_1 import load_repeats, generate_mismatches, add_indels, add_base_changes
-from random_seq_rep_1 import get_identity, create_TSD, fragment
+from random_sequence_TEs import load_repeats, generate_mismatches, add_indels, add_base_changes
+from random_sequence_TEs import get_identity, create_TSD, fragment
 
 #Load params from YAML file config.yml in same directory
 def parse_yaml():

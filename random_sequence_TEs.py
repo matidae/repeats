@@ -43,11 +43,6 @@ def load_repeats(params):
             repeats_dict[name] = repeat
     return repeats_dict
 
-###Load other variables###
-#Calculate length of sequence of all repeats 
-#sum_rep_length = sum([len(rep.sequence) * rep.num_rep for rep in repeats])
-#Calculate length of sequence that is going to be randomly generated
-#rand_seq_length = seq_length - sum_rep_length
 
 def generate_random_sequence(params):
     #Create DNA alphabet for random sequence
@@ -87,7 +82,7 @@ def shuffle_repeats(repeats_dict):
 #Get identity using a normal distribution
 def get_identity(mean, sd):
     identity = int(numpy.random.normal(mean, sd, 1))
-    while  identity > 100:
+    while  identity > 100: #Welp, I'm stuck !! It's time for coffee.
         identity = int(numpy.random.normal(mean, sd, 1))
     return identity
 

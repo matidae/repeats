@@ -97,8 +97,6 @@ def generate_nests(repeats, gff, seq, prefix):
         
         if strand == "-":
             new_nest_seq_str = str(Seq.Seq(new_nest_seq_tsd_frag).reverse_complement())
-            tsd_5_len = len(tsd_seq_3)
-            tsd_3_len = len(tsd_seq_5)
         frag_note = ""
         if isFrag:
             frag_note = ";fragment=" + str(frag)

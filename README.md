@@ -20,3 +20,15 @@
 **repeats_list** : configuration file with a row for each TE and 9 columns: id_of_TE, number_of_repeats, %_identity, std_dev, %_indels, has_TSD_?, real_length, %_fragmentation, %_nested 
 
 **config.yml** : configuration file with prefixes for the output, size of base sequence, and location of repeats_list and fasta files.
+
+*First run, insert TEs in base sequence:*
+
+*e.g.: ./random_sequence_TEs.py (expects repeats.fa, config.yml and repeats_list in same directory)*
+
+*output: prefix_out_repeats.gff, prefix_out_repeats.fasta (only modified repeats), prefix_out_sequence.fasta (full sequence)*
+
+*Next run, nest TEs in the previous sequence:*
+
+*e.g.: ./random_nest_TEs.py (expects repeats.fa, config.yml, repeats_list, prefix_out_repeats.gff in same directory)*
+
+*output: prefix_out_repeats_nest.gff, prefix_out_sequence_nest.fasta (full sequence)*
